@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PocketSmart AI</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <div class="container">
+
+            <h1>💰 PocketSmart AI</h1>
+
+            <p>
+                Your Smart Budget & Recommendation Assistant
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <section class="card">
+
+            <h2>📊 Analyze Your Budget</h2>
+
+            <form
+                action="/analyze"
+                method="post"
+            >
+
+                <label for="income">
+                    Monthly Income
+                </label>
+
+                <input
+                    type="number"
+                    id="income"
+                    name="income"
+                    min="0"
+                    step="0.01"
+                    placeholder="Example: 25000"
+                    value="{{ income if income else '' }}"
+                    required
+                >
+
+
+                <label for="expenses">
+                    Monthly Expenses
+                </label>
+
+                <textarea
+                    id="expenses"
+                    name="expenses"
+                    rows="10"
+                    placeholder="Example:
+
+Food: ₹5000
+Transport: ₹2000
+Rent: ₹8000
+Entertainment: ₹1500
+Other: ₹1000"
+                    required
+                >{{ expenses if expenses else '' }}</textarea>
+
+
+                <button type="submit">
+                    🤖 Analyze My Budget
+                </button>
+
+            </form>
+
+        </section>
+
+
+        {% if result %}
+
+        <section class="card result">
+
+            <h2>🤖 PocketSmart AI Analysis</h2>
+
+            <div class="analysis">
+
+                {{ result }}
+
+            </div>
+
+        </section>
+
+        {% endif %}
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            PocketSmart AI • Smart budgeting powered by AI
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
