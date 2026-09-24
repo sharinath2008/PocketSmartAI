@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    min-height: 100vh;
+}
+
+
+header {
+    background: #182848;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+header p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+main {
+    padding: 35px 0;
+}
+
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.card h2 {
+    margin-bottom: 25px;
+}
+
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #182848;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+.result {
+    border-left: 5px solid #182848;
+}
+
+
+.analysis {
+    white-space: pre-wrap;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #666;
+}
